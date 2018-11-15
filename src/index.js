@@ -4,15 +4,16 @@ const fs = Promise.promisifyAll(require('fs'))
 const request = require('request');
 const sprintf = require('sprintf-js').sprintf;
 
-const imageDir = 'images';
-const runs = 5;
+const imageDir = 'images'; // make this directory prior to running, otherwise it will throw an error
+const runs = 5; // set number of runs here
 
 const urlOptions = {
   baseUrl: 'https://loremflickr.com', 
-  width: '1280',
-  height: '853',
-  topic: 'nature'
+  width: '1280', // width in pixels of images
+  height: '853', // height in pixels of images
+  topic: 'nature' // topic
 };
+
 const timeoutInterval = 2000;
 let timeout = 0;
 
